@@ -7,6 +7,13 @@ import time, os, sys, subprocess
  #HashGen
 
 HASHLANG = {
+    'a': 'au001x', 'b': 'au002x', 'c': 'au003x', 'd': 'au004x',
+    'e': 'au005x', 'f': 'au006x', 'g': 'au007x', 'h': 'au008x',
+    'i': 'au009x', 'j': 'au010x', 'k': 'au011x', 'l': 'au012x',
+    'm': 'au013x', 'n': 'au014x', 'o': 'au015x', 'p': 'au016x',
+    'q': 'au017x', 'r': 'au018x', 's': 'au019x', 't': 'au020x',
+    'u': 'au021x', 'v': 'au022x', 'w': 'au023x', 'x': 'au024x',
+    'y': 'au025x', 'z': 'au026x',
     'A': 'au001X', 'B': 'au002X', 'C': 'au003X', 'D': 'au004X', 'E': 'au005x', 'F': 'au006X', 'G': 'au007X', 'H': 'au008X', 'I': 'au009X',
     'J': 'au0010X', 'K': 'au0011X', 'L': 'au0012X', 'M': 'au0013X', 'N': 'au0014X', 'O': 'au0015X', 'P': 'au0016X', 'Q': 'au0017X', 'R': 'au0018X',
     'S': 'au0019X', 'T': 'au0020X', 'U': 'au0021X', 'V': 'au0022X', 'W': 'au0023X', 'X': 'au0024X', 'Y': 'au0025X', 'Z': 'au0026X',
@@ -20,13 +27,13 @@ BNLANG = {
 }
 
 def bndash(text):
-    text = text.upper()
+    text = text
     bndash = ' '.join(BNLANG.get(char, '') for char in text)
     return bndash
 
 def pvlang(text):
     pvlang = []
-    for char in text.upper():
+    for char in text:
         if char == ' ':
             pvlang.append(' ')
         elif char in HASHLANG:
